@@ -7,7 +7,7 @@ class Db{
     public static function getConnect()
     {   
         try {
-            $conexion = new PDO('pgsql:host=localhost;port=5432;dbname=test;user=postgres;password=curso'); // cambiar la fuente de datos
+            $conexion = new PDO('sqlite:test.sqlite3'); // cambiar la fuente de datos
             return $conexion;
         } catch (Exception $e) {
             echo "Mensaje de error: " . $e->getMessage();
